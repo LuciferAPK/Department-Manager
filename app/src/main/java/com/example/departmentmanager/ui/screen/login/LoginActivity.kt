@@ -1,36 +1,30 @@
-package com.example.departmentmanager.ui.screen.splash
+package com.example.departmentmanager.ui.screen.login
 
-import android.annotation.SuppressLint
-import android.content.Intent
 import android.view.View
 import com.example.departmentmanager.R
 import com.example.departmentmanager.base.BaseActivity
-import com.example.departmentmanager.databinding.ActivitySplashBinding
+import com.example.departmentmanager.databinding.ActivityLoginBinding
 import com.example.departmentmanager.navigation.NavigationManager
-import com.example.departmentmanager.ui.screen.login.LoginActivity
-import com.example.departmentmanager.utils.CoroutineExt
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
-@SuppressLint("CustomSplashScreen")
 @AndroidEntryPoint
-class SplashActivity : BaseActivity<ActivitySplashBinding>() {
-
+class LoginActivity : BaseActivity<ActivityLoginBinding>() {
     @Inject
     lateinit var navigationManager: NavigationManager
 
     override fun getContentLayout(): Int {
-        return R.layout.activity_splash
+        return R.layout.activity_login
     }
 
     override fun initView() {
-        CoroutineExt.runOnMainAfterDelay(2000) {
-            navigationManager.gotoLoginActivityScreen()
-        }
+
     }
 
     override fun initListener() {
-
+        binding.btnLogin.setOnClickListener {
+            navigationManager.gotoMainActivityScreen()
+        }
     }
 
     override fun observerLiveData() {
