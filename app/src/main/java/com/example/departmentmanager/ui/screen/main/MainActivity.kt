@@ -4,6 +4,7 @@ import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import com.example.departmentmanager.R
 import com.example.departmentmanager.base.BaseActivity
@@ -11,20 +12,24 @@ import com.example.departmentmanager.databinding.ActivityMainBinding
 import com.example.departmentmanager.navigation.NavigationManager
 import com.google.android.material.navigation.NavigationView
 import dagger.hilt.android.AndroidEntryPoint
+import java.util.*
 import javax.inject.Inject
 
 @AndroidEntryPoint
-class MainActivity : BaseActivity<ActivityMainBinding>(), NavigationView.OnNavigationItemSelectedListener {
+class MainActivity : BaseActivity<ActivityMainBinding>(),
+    NavigationView.OnNavigationItemSelectedListener {
     @Inject
     lateinit var navigationManager: NavigationManager
-    private val actionBarDrawerToggle by lazy {
-        ActionBarDrawerToggle(
-            this,
-            binding.drawerLayout,
-            binding.toolbar,
-            R.string.nav_drawer_open,
-            R.string.nav_drawer_close
-        )
+
+    private val onShowLeftMenu = object : OnShowLeftMenu{
+        override fun show() {
+            binding.leftMenu.openDrawer(GravityCompat.START)
+        }
+
+        override fun hide() {
+            binding.leftMenu.closeDrawer(GravityCompat.START)
+        }
+
     }
 
     override fun getContentLayout(): Int {
@@ -32,10 +37,25 @@ class MainActivity : BaseActivity<ActivityMainBinding>(), NavigationView.OnNavig
     }
 
     override fun initView() {
-        navigationManager.gotoHomeFragmentScreen(supportFragmentManager)
+        setUpToolbar()
         binding.navigationView.setNavigationItemSelectedListener(this)
-        binding.drawerLayout.addDrawerListener(actionBarDrawerToggle)
-        actionBarDrawerToggle.syncState()
+    }
+
+    private fun setUpToolbar() {
+        binding.toolbar.setNavigationIcon(R.drawable.ic_menu)
+        this.setSupportActionBar(binding.toolbar)
+        Objects.requireNonNull(this.supportActionBar)
+            ?.setDisplayHomeAsUpEnabled(true)
+        this.supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+    }
+
+    override fun onOptionsItemSelected(item: android.view.MenuItem): Boolean {
+        if (item.itemId == android.R.id.home) {
+            onShowLeftMenu.show()
+            return true
+        }
+        return super.onOptionsItemSelected(item)
     }
 
     override fun initListener() {
@@ -52,43 +72,15 @@ class MainActivity : BaseActivity<ActivityMainBinding>(), NavigationView.OnNavig
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when(item.itemId) {
-            R.id.nav_home -> {
-                if (mCurrentFragment != FRAGMENT_HOME) {
-                    navigationManager.gotoHomeFragmentScreen(supportFragmentManager)
-                    mCurrentFragment = FRAGMENT_HOME
-                }
-            }
-            R.id.nav_user -> {
-                if (mCurrentFragment != FRAGMENT_INFO) {
-                    navigationManager.gotoInfoFragmentScreen(supportFragmentManager)
-                    mCurrentFragment = FRAGMENT_INFO
-                }
-            }
-            R.id.nav_mk -> {
-                if (mCurrentFragment != FRAGMENT_PASS) {
-                    navigationManager.gotoChangePassFragmentScreen(supportFragmentManager)
-                    mCurrentFragment = FRAGMENT_PASS
-                }
-            }
-            R.id.nav_lo -> {
-                navigationManager.gotoLoginActivityScreen()
+            R.id.nav_home ->{
+                navigationManager.gotoHomeFragmentScreen(supportFragmentManager)
             }
         }
-        binding.drawerLayout.closeDrawer(GravityCompat.START)
+        onShowLeftMenu.hide()
         return true
     }
 
     override fun onBackPressed() {
-        if (binding.drawerLayout.isDrawerOpen(GravityCompat.START)) {
-            binding.drawerLayout.closeDrawer(GravityCompat.START)
-        } else super.onBackPressed()
     }
 
-    companion object {
-        private const val FRAGMENT_HOME = 0
-        private const val FRAGMENT_INFO = 1
-        private const val FRAGMENT_PASS = 2
-
-        private var mCurrentFragment = FRAGMENT_HOME
-    }
 }

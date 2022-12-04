@@ -51,9 +51,10 @@
                     android:layout_height="wrap_content">
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/tv_tk"
+                        android:id="@+id/tv_username"
                         android:layout_width="match_parent"
-                        android:layout_height="52dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
                         android:textColor="@color/black"
                         android:hint="Tài khoản" />
                 </com.google.android.material.textfield.TextInputLayout>
@@ -65,9 +66,10 @@
                     android:layout_marginTop="15dp">
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/tv_pass"
+                        android:id="@+id/tv_password"
                         android:layout_width="match_parent"
-                        android:layout_height="52dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
                         android:textColor="@color/black"
                         android:hint="Mật khẩu"
                         android:inputType="textPassword"/>
@@ -82,11 +84,23 @@
             style="@style/ButtonLoginStyle"
             android:layout_margin="20dp"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:textSize="18sp"
             android:text="Đăng nhập"
             app:layout_constraintTop_toBottomOf="@id/view"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent" />
-
+        <ProgressBar
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/progressbar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:max="100"
+            android:visibility="invisible"
+            android:backgroundTint="@color/white"
+            android:indeterminateTint="#1a09d6"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

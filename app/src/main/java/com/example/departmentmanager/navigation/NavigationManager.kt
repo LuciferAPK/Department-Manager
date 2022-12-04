@@ -2,13 +2,10 @@ package com.example.departmentmanager.navigation
 
 import android.content.Context
 import android.content.Intent
-import android.os.Bundle
 import androidx.fragment.app.FragmentManager
 import com.example.departmentmanager.R
 import com.example.departmentmanager.ui.screen.login.LoginActivity
-import com.example.departmentmanager.ui.screen.main.ChangePassFragment
 import com.example.departmentmanager.ui.screen.main.HomeFragment
-import com.example.departmentmanager.ui.screen.main.InfoFragment
 import com.example.departmentmanager.ui.screen.main.MainActivity
 import javax.inject.Singleton
 
@@ -30,23 +27,7 @@ class NavigationManager(private val context: Context) {
         val fragment = HomeFragment()
         val fragmentTransaction = parentFragmentManager.beginTransaction()
         fragmentTransaction.replace(R.id.content_frame, fragment)
-//        fragmentTransaction.addToBackStack(fragment.tag)
         fragmentTransaction.commit()
     }
 
-    fun gotoInfoFragmentScreen(parentFragmentManager: FragmentManager) {
-        val fragment = InfoFragment()
-        val fragmentTransaction = parentFragmentManager.beginTransaction()
-        fragmentTransaction.replace(R.id.content_frame, fragment)
-//        fragmentTransaction.addToBackStack(fragment.tag)
-        fragmentTransaction.commit()
-    }
-
-    fun gotoChangePassFragmentScreen(parentFragmentManager: FragmentManager) {
-        val fragment = ChangePassFragment()
-        val fragmentTransaction = parentFragmentManager.beginTransaction()
-        fragmentTransaction.replace(R.id.content_frame, fragment)
-//        fragmentTransaction.addToBackStack(fragment.tag)
-        fragmentTransaction.commit()
-    }
 }
