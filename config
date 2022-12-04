@@ -1,0 +1,17 @@
+[core]
+	repositoryformatversion = 0
+	filemode = false
+	bare = false
+	logallrefupdates = true
+	symlinks = false
+	ignorecase = true
+[remote "origin"]
+	url = https://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@github.com/LuciferAPK/Department-Manager.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+	pushurl = https://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@github.com/LuciferAPK/Department-Manager.git
+[branch "develop"]
+	remote = origin
+	merge = refs/heads/develop
+[branch "phuoc/implement_home_screen"]
+	remote = origin
+	merge = refs/heads/phuoc/implement_home_screen

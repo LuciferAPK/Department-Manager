@@ -1,0 +1,34 @@
+{
+  "$id": "21",
+  "AutoRefresh": true,
+  "AutoRefreshRemotes": true,
+  "CommitTextLinks": null,
+  "DraftCommitMsg": "",
+  "IncomingSavedCount": 0,
+  "LastCheckedRemotes": "2022-12-04T21:02:58.2535749+07:00",
+  "LastUsedView": 1,
+  "LogBranchFilterIndex": 0,
+  "OutgoingSavedCount": 0,
+  "SidebarExpandedItems": [
+    "Branches",
+    "Branches/phuoc"
+  ],
+  "SidebarWidth": 210.0,
+  "SubtreeLinks": [],
+  "NeedsLargeFilesPull": false,
+  "RemoteProjectLinks": [
+    {
+      "$id": "22",
+      "BaseUrl": "https://www.github.com",
+      "Identifier": "LuciferAPK/Department-Manager",
+      "RemoteName": "origin",
+      "Type": 0,
+      "Username": "phuocdn.1115@gmail.com",
+      "CloneUrl": null,
+      "ProjectUrl": null,
+      "AccountId": "",
+      "AvatarUrl": null,
+      "DisplayName": "origin: https://www.github.com"
+    }
+  ]
+}
