@@ -1,10 +1,20 @@
 package com.example.departmentmanager.application
 
+import android.content.ClipData.Item
+import com.example.departmentmanager.data.model.ItemFucntion
+
 private val appInfoContext = AppInfoContext()
 private val sessionContext = SessionContext()
 private val networkContext = NetworkContext()
 
 object ApplicationContext {
+    val functions = listOf(
+        ItemFucntion(title = "Quản lí nhân sự"),
+        ItemFucntion(title = "Quản lí phòng ban"),
+        ItemFucntion(title = "Tasks"),
+        ItemFucntion(title = "Xem thống kê"),
+        ItemFucntion(title = "Thông báo")
+    )
 
     /** Update field dynamic in AppInfoContext */
     fun updateAppInfoContext(

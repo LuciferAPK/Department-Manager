@@ -1,7 +1,7 @@
 package com.example.departmentmanager.injection
 
-import com.example.departmentmanager.BASE_URL
 import com.example.departmentmanager.network.Api
+import com.example.householdappliances.network.BASE_URL
 import com.google.gson.GsonBuilder
 import dagger.Module
 import dagger.Provides
