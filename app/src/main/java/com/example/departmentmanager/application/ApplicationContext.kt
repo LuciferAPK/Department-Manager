@@ -4,7 +4,6 @@ import android.content.ClipData.Item
 import com.example.departmentmanager.data.model.ItemFucntion
 
 private val appInfoContext = AppInfoContext()
-private val sessionContext = SessionContext()
 private val networkContext = NetworkContext()
 
 object ApplicationContext {
@@ -37,16 +36,16 @@ object ApplicationContext {
         if (minRam != null) appInfoContext.minRam = minRam
     }
 
-    /** Update field dynamic in SessionContext */
-    fun updateSessionContext(userInfoSet: String? = null, isVipSet: Boolean? = null) {
-        if (userInfoSet != null) sessionContext.userInfo = userInfoSet
-        if (isVipSet != null) sessionContext.isVip = isVipSet
-    }
+//    /** Update field dynamic in SessionContext */
+//    fun updateSessionContext(userInfoSet: String? = null, isVipSet: Boolean? = null) {
+//        if (userInfoSet != null) sessionContext.userInfo = userInfoSet
+//        if (isVipSet != null) sessionContext.isVip = isVipSet
+//    }
 
     fun getAppInfoContext() : AppInfoContext = appInfoContext
     fun getNetworkContext() : NetworkContext = networkContext
-    fun getSessionContext() : SessionContext {
-        sessionContext.idAutoIncrement += 1
-        return sessionContext
-    }
+//    fun getSessionContext() : SessionContext {
+//        sessionContext.idAutoIncrement += 1
+//        return sessionContext
+//    }
 }
