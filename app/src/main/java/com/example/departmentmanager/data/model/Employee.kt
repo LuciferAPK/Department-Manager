@@ -10,7 +10,7 @@ data class Employee(
     @SerializedName("description")
     var description: String? = "",
     @SerializedName("dob")
-    var dob: Long? = 0,
+    var dob: String? = "",
     @SerializedName("email")
     var email: String? = "",
     @SerializedName("gender")

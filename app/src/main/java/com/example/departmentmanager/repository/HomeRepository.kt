@@ -5,7 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import com.example.departmentmanager.data.model.Employee
 import com.example.departmentmanager.network.Api
 import com.example.departmentmanager.preferences.PreferencesManager
-import com.example.householdappliances.network.END_POINT_LOGIN
+import com.example.departmentmanager.network.END_POINT_LOGIN
 import com.google.gson.Gson
 import kotlinx.coroutines.*
 import com.example.departmentmanager.base.Result

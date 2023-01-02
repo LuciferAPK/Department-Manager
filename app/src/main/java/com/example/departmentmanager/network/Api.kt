@@ -1,5 +1,6 @@
 package com.example.departmentmanager.network
 
+import com.example.departmentmanager.data.model.Department
 import com.example.departmentmanager.data.model.Employee
 import retrofit2.Response
 import retrofit2.http.Body
@@ -21,4 +22,15 @@ interface Api {
         @Url url: String?,
         @Body employee: Employee?
     ) : Response<Employee?>
+
+    @GET
+    suspend fun getAllDepartment(
+        @Url url: String?
+    ) : Response<List<Department?>>
+
+    @GET
+    suspend fun getEmployeeOfDepartment(
+        @Url url: String?,
+        @Query("idDepartment") idDepartment: Int?
+    ) : Response<List<Employee?>>
 }

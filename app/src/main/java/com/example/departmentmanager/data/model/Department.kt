@@ -7,7 +7,7 @@ import java.io.Serializable
 data class Department(
     @SerializedName("capacity")
     var capacity: Int? = null,
-    @SerializedName("createdTime")
+    @SerializedName("createdtime")
     var createdTime: Long? = null,
     @SerializedName("description")
     var description: String? = null,

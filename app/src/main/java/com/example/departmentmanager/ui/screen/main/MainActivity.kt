@@ -39,6 +39,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(),
     override fun initView() {
         setUpToolbar()
         binding.navigationView.setNavigationItemSelectedListener(this)
+        navigationManager.gotoHomeFragmentScreen(supportFragmentManager)
     }
 
     private fun setUpToolbar() {

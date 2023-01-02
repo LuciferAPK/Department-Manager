@@ -8,7 +8,7 @@ import android.widget.BaseAdapter
 import com.example.departmentmanager.application.ApplicationContext
 import com.example.departmentmanager.databinding.LayoutItemFunctionMenuBinding
 
-class ItemFunctionAdapter(val context: Context) : BaseAdapter() {
+class ItemFunctionAdapter(val context: Context, val onClickItem:()-> Unit) : BaseAdapter() {
     private val items = ApplicationContext.functions
     private lateinit var binding : LayoutItemFunctionMenuBinding
     override fun getCount(): Int {
@@ -28,7 +28,9 @@ class ItemFunctionAdapter(val context: Context) : BaseAdapter() {
         binding = LayoutItemFunctionMenuBinding.inflate(inflater, viewGroup, false)
         binding.tvNameFunction.text = items[position].title
 
-
+        binding.root.setOnClickListener {
+            onClickItem.invoke()
+        }
         return binding.root
     }
 }

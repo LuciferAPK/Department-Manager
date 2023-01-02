@@ -7,6 +7,7 @@ import com.example.departmentmanager.R
 import com.example.departmentmanager.ui.screen.login.LoginActivity
 import com.example.departmentmanager.ui.screen.main.HomeFragment
 import com.example.departmentmanager.ui.screen.main.MainActivity
+import com.example.departmentmanager.ui.screen.main.quanlinhansu.HumanResourceFragment
 import javax.inject.Singleton
 
 @Singleton
@@ -25,6 +26,13 @@ class NavigationManager(private val context: Context) {
 
     fun gotoHomeFragmentScreen(parentFragmentManager: FragmentManager) {
         val fragment = HomeFragment()
+        val fragmentTransaction = parentFragmentManager.beginTransaction()
+        fragmentTransaction.replace(R.id.content_frame, fragment)
+        fragmentTransaction.commit()
+    }
+
+    fun gotoHumanResourceFragment(parentFragmentManager: FragmentManager){
+        val fragment = HumanResourceFragment()
         val fragmentTransaction = parentFragmentManager.beginTransaction()
         fragmentTransaction.replace(R.id.content_frame, fragment)
         fragmentTransaction.commit()
