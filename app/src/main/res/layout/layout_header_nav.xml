@@ -40,13 +40,13 @@
             android:layout_height="wrap_content"
             android:textColor="@color/black"
             android:textStyle="bold"
-            android:text="Cường Smith"
+            android:text="Thu Hồng"
             android:textSize="16sp"
             android:layout_marginTop="8dp" />
 
         <TextView
             android:id="@+id/tv_email"
-            android:text="csplus.cuong.smith@gmail.com"
+            android:text="thuhong123@gmail.com"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
