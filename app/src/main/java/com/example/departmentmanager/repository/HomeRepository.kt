@@ -13,6 +13,7 @@ import com.example.departmentmanager.data.response.ErrorResponse
 import com.example.departmentmanager.preferences.EMPLOYEE
 import com.example.departmentmanager.utils.GsonUtils
 import javax.inject.Inject
+import kotlin.math.E
 
 class HomeRepository @Inject constructor(
     private val api: Api,
@@ -46,4 +47,6 @@ class HomeRepository @Inject constructor(
     }
 
     fun saveEmployee(e: Employee) = preferencesManager.save(EMPLOYEE,GsonUtils.serialize(e,Employee::class.java))
+
+    fun getEmployee() : Employee = GsonUtils.deserialize(preferencesManager.getString(EMPLOYEE),Employee::class.java)
 }

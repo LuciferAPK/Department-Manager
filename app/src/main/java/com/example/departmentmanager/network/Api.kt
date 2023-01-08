@@ -2,6 +2,7 @@ package com.example.departmentmanager.network
 
 import com.example.departmentmanager.data.model.Department
 import com.example.departmentmanager.data.model.Employee
+import com.example.departmentmanager.data.model.Task
 import retrofit2.Response
 import retrofit2.http.Body
 import retrofit2.http.GET
@@ -22,6 +23,18 @@ interface Api {
         @Url url: String?,
         @Body employee: Employee?
     ) : Response<Employee?>
+
+    @POST
+    suspend fun addTask(
+        @Url url: String?,
+        @Body task: Task?
+    ) : Response<Task?>
+
+    @POST
+    suspend fun addDepartment(
+        @Url url: String?,
+        @Body department: Department?
+    ) : Response<Department?>
 
     @GET
     suspend fun getAllDepartment(

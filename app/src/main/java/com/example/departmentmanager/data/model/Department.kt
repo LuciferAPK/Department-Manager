@@ -14,5 +14,7 @@ data class Department(
     @SerializedName("id")
     var id: Int? = null,
     @SerializedName("name")
-    var name: String? = null
+    var name: String? = null,
+    @SerializedName("function")
+    var function: String? = null
 ) : Serializable

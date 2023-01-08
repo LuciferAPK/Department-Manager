@@ -27,9 +27,8 @@ class LoginActivity : BaseActivity<ActivityLoginBinding>() {
 
     override fun initListener() {
         binding.btnLogin.setOnClickListener {
-            navigationManager.gotoMainActivityScreen()
-//            binding.btnLogin.isEnabled = false
-//            viewModel.checkLogin(binding.tvUsername.text.toString().trim(), binding.tvPassword.text.toString().trim())
+            binding.btnLogin.isEnabled = false
+            viewModel.checkLogin(binding.tvUsername.text.toString().trim(), binding.tvPassword.text.toString().trim())
         }
     }
 
