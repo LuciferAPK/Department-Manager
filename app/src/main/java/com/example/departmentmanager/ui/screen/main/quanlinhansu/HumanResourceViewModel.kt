@@ -5,13 +5,15 @@ import com.example.departmentmanager.base.SingleLiveEvent
 import com.example.departmentmanager.data.model.Department
 import com.example.departmentmanager.base.Result
 import com.example.departmentmanager.data.model.Employee
+import com.example.departmentmanager.repository.HomeRepository
 import com.example.departmentmanager.repository.HumanResourceRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
 @HiltViewModel
 class HumanResourceViewModel @Inject constructor(
-    private val humanResourceRepository: HumanResourceRepository
+    private val humanResourceRepository: HumanResourceRepository,
+    private val homeRepository: HomeRepository
 ): ViewModel() {
     val listDepartmentResults = SingleLiveEvent<Result<List<Department>>>()
     fun getAllDepartment(){
@@ -33,7 +35,7 @@ class HumanResourceViewModel @Inject constructor(
 
     val employeeByDepartmentResult = SingleLiveEvent<Result<List<Employee>>>()
     fun getEmployeeOfDepartment(
-        idDepartment: Int ?= 0
+        idDepartment: Int ?= null
     ){
         val request = humanResourceRepository.getEmployeeOfDepartment(idDepartment)
         employeeByDepartmentResult.addSource(request){
@@ -50,4 +52,6 @@ class HumanResourceViewModel @Inject constructor(
             employeeUpdateResult.postValue(it)
         }
     }
+
+    fun getEmployee() = homeRepository.getEmployee()
 }

@@ -76,6 +76,9 @@ class MainActivity : BaseActivity<ActivityMainBinding>(),
             R.id.nav_home ->{
                 navigationManager.gotoHomeFragmentScreen(supportFragmentManager)
             }
+            R.id.nav_profile ->{
+                navigationManager.gotoProfileFragmentScreen(supportFragmentManager)
+            }
         }
         onShowLeftMenu.hide()
         return true

@@ -47,6 +47,7 @@ class AddEmployeeFragment : BaseFragment<LayoutAddEmployeeFragmentBinding>() {
         listPosition.apply {
             add(ItemSpinner(title = "LEADER"))
             add(ItemSpinner(title = "STAFF"))
+            add(ItemSpinner(title = "HR"))
             add(ItemSpinner(title = "CTO"))
             add(ItemSpinner(title = "MANAGER"))
             add(ItemSpinner(title = "INTERN"))
