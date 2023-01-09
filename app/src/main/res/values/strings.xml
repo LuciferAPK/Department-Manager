@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Department Manager</string>
+    <string name="app_name">Quản lí nhân sự</string>
     <string name="title_activity_login">LoginActivity</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>

@@ -28,7 +28,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <TextView
-                        android:text="Name"
+                        android:text="Tên phòng ban"
                         android:padding="10dp"
                         android:textColor="@color/black"
                         android:textSize="15sp"
@@ -50,7 +50,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <TextView
-                        android:text="Function"
+                        android:text="Chức năng"
                         android:padding="10dp"
                         android:textColor="@color/black"
                         android:textSize="15sp"
@@ -73,7 +73,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp">
                     <TextView
-                        android:text="Description"
+                        android:text="Mô tả"
                         android:padding="10dp"
                         android:textColor="@color/black"
                         android:textSize="15sp"
@@ -95,7 +95,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <TextView
-                        android:text="Capacity"
+                        android:text="Quy mô, số lượng"
                         android:padding="10dp"
                         android:textColor="@color/black"
                         android:textSize="15sp"
@@ -133,14 +133,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <Button
-                        android:text="Add"
+                        android:text="Thêm"
                         android:id="@+id/btn_add"
                         android:layout_weight="1"
                         android:layout_width="wrap_content"
                         android:layout_marginHorizontal="15dp"
                         android:layout_height="wrap_content"/>
                     <Button
-                        android:text="CAncel"
+                        android:text="Hủy"
                         android:id="@+id/btn_cancel"
                         android:layout_marginHorizontal="15dp"
                         android:layout_weight="1"

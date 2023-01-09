@@ -13,7 +13,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
                 <TextView
-                    android:text="Thêm task mới"
+                    android:text="Thêm công việc mới"
                     android:textSize="20sp"
                     android:gravity="center_horizontal"
                     android:textStyle="bold"
@@ -28,14 +28,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <TextView
-                        android:text="Title"
+                        android:text="Tiêu đề"
                         android:padding="10dp"
                         android:textColor="@color/black"
                         android:textSize="15sp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
                     <EditText
-                        android:hint="Insert tile your task here"
+                        android:hint="Thêm tiêu đề"
                         android:id="@+id/edt_title"
                         android:textSize="15sp"
                         android:padding="5dp"
@@ -51,14 +51,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <TextView
-                        android:text="Detail"
+                        android:text="Nội dung"
                         android:padding="10dp"
                         android:textColor="@color/black"
                         android:textSize="15sp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
                     <EditText
-                        android:hint="Type detail your task here"
+                        android:hint="Thêm nội dung công việc"
                         android:textSize="15sp"
                         android:padding="5dp"
                         android:id="@+id/edt_details"
@@ -74,7 +74,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <TextView
-                        android:text="Created Time"
+                        android:text="Ngày tạo"
                         android:padding="10dp"
                         android:textColor="@color/black"
                         android:textSize="15sp"
@@ -97,7 +97,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <TextView
-                        android:text="Estimate"
+                        android:text="Dự tính "
                         android:padding="10dp"
                         android:textColor="@color/black"
                         android:textSize="15sp"
@@ -117,7 +117,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <TextView
-                        android:text="Status"
+                        android:text="Trạng thái"
                         android:padding="10dp"
                         android:textColor="@color/black"
                         android:textSize="15sp"
@@ -136,7 +136,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <TextView
-                        android:text="AssignTo"
+                        android:text="Nhân viên"
                         android:padding="10dp"
                         android:textColor="@color/black"
                         android:textSize="15sp"
@@ -152,14 +152,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <Button
-                        android:text="Add"
+                        android:text="Thêm"
                         android:id="@+id/btn_add"
                         android:layout_weight="1"
                         android:layout_width="wrap_content"
                         android:layout_marginHorizontal="15dp"
                         android:layout_height="wrap_content"/>
                     <Button
-                        android:text="CAncel"
+                        android:text="Hủy"
                         android:id="@+id/btn_cancel"
                         android:layout_marginHorizontal="15dp"
                         android:layout_weight="1"
