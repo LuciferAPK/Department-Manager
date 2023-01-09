@@ -4,6 +4,7 @@ import android.view.View
 import android.widget.Toast
 import androidx.activity.viewModels
 import com.example.departmentmanager.R
+import com.example.departmentmanager.application.ApplicationContext.sessionContext
 import com.example.departmentmanager.base.BaseActivity
 import com.example.departmentmanager.base.Result
 import com.example.departmentmanager.databinding.ActivityLoginBinding
@@ -46,6 +47,8 @@ class LoginActivity : BaseActivity<ActivityLoginBinding>() {
                             Toast.makeText(baseContext,"Sai thông tin đăng nhập", Toast.LENGTH_SHORT).show()
                         }
                         else{
+                            sessionContext.name = result.data.name.toString()
+                            sessionContext.email = result.data.email.toString()
                             viewModel.saveEmployee(result.data)
                             navigationManager.gotoMainActivityScreen()
                         }
