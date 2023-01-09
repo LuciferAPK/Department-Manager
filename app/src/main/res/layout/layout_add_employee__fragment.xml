@@ -20,7 +20,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <TextView
-                        android:text="Department"
+                        android:text="Chọn phòng ban"
                         android:padding="10dp"
                         android:textColor="@color/black"
                         android:textSize="15sp"
@@ -39,7 +39,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <TextView
-                        android:text="Name"
+                        android:text="Tên"
                         android:padding="10dp"
                         android:textColor="@color/black"
                         android:textSize="15sp"
@@ -61,7 +61,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <TextView
-                        android:text="Address"
+                        android:text="Địa chỉ"
                         android:padding="10dp"
                         android:textColor="@color/black"
                         android:textSize="15sp"
@@ -83,7 +83,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <TextView
-                        android:text="DOB"
+                        android:text="Ngày sinh"
                         android:padding="10dp"
                         android:textColor="@color/black"
                         android:textSize="15sp"
@@ -92,7 +92,7 @@
                     <EditText
                         android:textSize="15sp"
                         android:padding="5dp"
-                        android:hint="Click here to pick a date"
+                        android:hint="Chọn ngày sinh"
                         android:id="@+id/edt_dob"
                         android:background="@drawable/bg_edit_text_crud"
                         android:layout_width="match_parent"
@@ -128,7 +128,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <TextView
-                        android:text="Telephone"
+                        android:text="Điện thoại"
                         android:padding="10dp"
                         android:textColor="@color/black"
                         android:textSize="15sp"
@@ -150,7 +150,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <TextView
-                        android:text="Hometown"
+                        android:text="Quê quán"
                         android:padding="10dp"
                         android:textColor="@color/black"
                         android:textSize="15sp"
@@ -172,7 +172,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <TextView
-                        android:text="Gender"
+                        android:text="Giới tính"
                         android:padding="10dp"
                         android:textColor="@color/black"
                         android:textSize="15sp"
@@ -186,18 +186,18 @@
                         <RadioButton
                             android:id="@+id/rb_male"
                             android:checked="true"
-                            android:text="Male"
+                            android:text="Nam"
                             android:paddingHorizontal="10dp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
                         <RadioButton
                             android:id="@+id/rb_female"
-                            android:text="Female"
+                            android:text="Nữ"
                             android:paddingHorizontal="10dp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
                         <RadioButton
-                            android:text="Other"
+                            android:text="Khác"
                             android:id="@+id/rb_other"
                             android:paddingHorizontal="10dp"
                             android:layout_width="wrap_content"
@@ -213,7 +213,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <TextView
-                        android:text="Position"
+                        android:text="Vị trí"
                         android:padding="10dp"
                         android:textColor="@color/black"
                         android:textSize="15sp"
@@ -229,14 +229,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <Button
-                        android:text="Add"
+                        android:text="Thêm"
                         android:id="@+id/btn_add"
                         android:layout_weight="1"
                         android:layout_width="wrap_content"
                         android:layout_marginHorizontal="15dp"
                         android:layout_height="wrap_content"/>
                     <Button
-                        android:text="CAncel"
+                        android:text="Hủy"
                         android:id="@+id/btn_cancel"
                         android:layout_marginHorizontal="15dp"
                         android:layout_weight="1"
