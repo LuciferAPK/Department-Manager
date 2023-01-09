@@ -5,8 +5,11 @@ import com.example.departmentmanager.data.model.ItemFucntion
 
 private val appInfoContext = AppInfoContext()
 private val networkContext = NetworkContext()
+//private val sessionContext = SessionContext()
 
 object ApplicationContext {
+    val sessionContext = SessionContext()
+
     val functions = listOf(
         ItemFucntion(title = "Quản lí nhân sự", image = R.drawable.ic_human_resource),
         ItemFucntion(title = "Quản lí phòng ban", image = R.drawable.ic_department),
